@@ -55,6 +55,8 @@ Once you have the answers, generate all four stage prompts below.
 
 Generate a research plan prompt designed to be run identically (or with minor adaptation) across multiple AI tools in parallel — Perplexity, Claude, GPT, Gemini, Grok, DeepSeek, and any specialized tools the user listed. The prompt must be a precise, systematic research plan designed to extract maximum value from each Deep Research run.
 
+> **For a higher-rigor, tool-tuned Stage 0 prompt:** generate it with the `research-architect` skill (the 9-field universal core + per-tool deltas), then run that brief across your tools. research-architect designs the scatter-search specification; KB Builder pipelines the results.
+
 **Critical: Think carefully about strategy.** The most important creative decision is choosing the right research strategy for the topic type. Don't default to a generic approach. Examples:
 
 - **Comparative research** (e.g., "best X for Y") → Tournament strategy: define criteria, split into pairs, compare, filter winners
@@ -405,6 +407,7 @@ STAGE 3 — TRACKED EXECUTION
 
 ## Cross-References
 
+- **Research Architect** — generates the deep-research specification behind Stage 0 (universal core + per-tool deltas). Use `research-architect` to design the scatter-search brief, then this pipeline to process the results.
 - **Boomerang (B)** — Stage 0 uses the Boomerang pattern for scatter search design. For single-topic research without the full pipeline, use Boomerang directly.
 - **Orchestrate (O)** — Stage 3 uses the Orchestrate pattern for tracked execution. For general multi-step project coordination, use Orchestrate directly.
 - **Recon (R)** — If any research stage needs targeted observation of a specific known source (a repo, a document, a system), use Recon instead of Boomerang for that source.

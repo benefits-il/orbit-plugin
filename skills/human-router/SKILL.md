@@ -35,6 +35,8 @@ You don't write prompts between agents — you make them write prompts for each 
 | **KB Builder** | Turn multi-source research into a structured knowledge base | B + O |
 | **Design Pipeline** | Go from PRD to production mockups with design system | B + KB Builder + O |
 
+**Research-spec engine:** `research-architect` generates the deep-research *specification* that powers Boomerang (B) and KB Builder — a tool-tuned brief (universal core + per-tool deltas) ready to paste into any Deep Research tool. Route to it whenever the brief itself needs to be excellent, not just quick.
+
 ---
 
 ## How to Advise
@@ -62,6 +64,7 @@ Use this decision logic:
 
 **Does the agent need broad research from the web or external tools?**
 - Use **Boomerang (B)** — invoke the `boomerang` skill
+- If the research *brief itself* must be world-class and tuned to a specific tool (ChatGPT / Gemini / Perplexity / Claude / Grok), first generate the specification with the `research-architect` skill, then carry it with Boomerang
 
 **Does one agent's output need to go to another agent?**
 - Is the task clear and the sender understands the receiver's needs?

@@ -500,6 +500,11 @@ section {
   color: var(--orbit-cyan);
 }
 
+/* Bundled extension — distinct indigo accent */
+.skill-card[data-skill="research-architect"] { --card-accent: #6366f1; }
+.skill-card[data-skill="research-architect"] .skill-card-letter { background: rgba(99, 102, 241, 0.15); color: #6366f1; }
+.skill-card[data-skill="research-architect"] .skill-tag { background: rgba(99, 102, 241, 0.15); color: #6366f1; }
+
 /* Compound cards span 2 cols on desktop */
 .skill-card.compound {
   grid-column: span 1;

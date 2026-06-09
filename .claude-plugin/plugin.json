@@ -1,5 +1,5 @@
 {
   "name": "orbit",
-  "version": "1.1.0",
-  "description": "5 atomic patterns for routing work between AI agents — Recon, Orchestrate, Boomerang, Interchange, Transfer."
+  "version": "1.2.0",
+  "description": "5 atomic patterns for routing work between AI agents — Recon, Orchestrate, Boomerang, Interchange, Transfer. Bundles the research-architect extension for tool-tuned deep-research specs."
 }

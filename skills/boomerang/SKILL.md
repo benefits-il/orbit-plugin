@@ -58,52 +58,33 @@ Once you have the answers, generate both prompts below.
 
 Generate a self-contained research plan prompt ready for direct paste into Deep Research tools (ChatGPT Deep Research, Perplexity, Gemini Deep Research). The prompt must be a precise, systematic research plan designed to extract maximum value from a single Deep Research run.
 
-**Critical: Think carefully about strategy.** The most important creative decision is choosing the right research strategy for the topic type. Don't default to a generic approach. Examples:
+Build Prompt A as a **deep-research specification** using the **research-architect method** — a DR prompt is not a question, it is a falsifiable, bounded research contract. If the `research-architect` skill is available, invoke it for the full method (rationale, examples, domain presets, and the complete ready-to-paste snippet library); otherwise construct the specification inline from the structure below.
 
-- **Comparative research** (e.g., "best X for Y") → Tournament strategy: define criteria, split into pairs, compare, filter winners
-- **Market research** (e.g., "market size for X") → Funnel strategy: start broad (global data), narrow to segment, validate with multiple sources
-- **Technical investigation** (e.g., "how does X work") → Layered strategy: start with overview, then dive into each component, cross-reference
-- **Sourcing/procurement** (e.g., "find suppliers for X") → Scout strategy: identify candidates, filter by criteria, deep-dive top results
-- **Trend analysis** (e.g., "what's happening with X") → Timeline strategy: map historical → current → projected, identify inflection points
+**The universal core (9 fields).** The generated Prompt A MUST contain all nine, adapted in depth to the topic:
 
-Adapt and invent strategies as needed — these are just starting points.
+1. **Role / Persona** — a specific expert identity that sets depth, terminology, and source bias.
+2. **Objective & Core Question + Decision Served** — name the exact decision the report informs; makes output actionable and falsifiable.
+3. **Context, Background & Key-Term Definitions** — define ambiguous terms up front to prevent confident hallucination.
+4. **Scope & Boundaries** — timeframe + geography + explicit inclusions/exclusions. The #1 lever against drift.
+5. **Decomposed Sub-Questions (3–7)** — break the one big question into structured sub-questions; never one giant question.
+6. **Source & Recency Requirements** — source-quality hierarchy (primary > secondary) + an explicit recency window.
+7. **Output Schema** — exact sections, required tables, and length. Request tables explicitly.
+8. **Evidence / Citation Rules** — cite every claim inline; ≥2 independent sources for key claims; mark unsourceable claims [UNVERIFIED].
+9. **Reasoning, Uncertainty & Self-Check** — distinguish consensus vs hypothesis; surface and analyze conflicts (never silently average them); verify before finishing.
 
-The generated research plan MUST include all six sections below. Adapt the content and depth of each section to the specific research topic.
+**Per-tool tuning (deltas).** After the universal core, append the tuning block for the target tool(s) — these are real behavioral quirks, not cosmetics:
+- **ChatGPT** — pre-answer clarifying questions; lead with verbs + keywords; if via API, rewrite the query first.
+- **Gemini** — put instructions after pasted context; end with "Cite all sources"; request a source-credibility table; edit the shown plan.
+- **Perplexity** — frame sub-questions as explicit searches (operators: site:/filetype:/recency); evidence rules go in the user prompt; inline [index] citations.
+- **Claude** — add success criteria + competing hypotheses + confidence tracking; wrap in light XML; citations as active markdown links.
+- **Grok** — trigger DeepSearch/DeeperSearch; set a date window; force a minimum source count; verify obscure sources.
 
-**1. OPENING STATEMENT**
-- Precise explanation of the research goal
-- Use quality activation words: "Ultimate", "Comprehensive", "most thorough", "exhaustive"
-- Set the scope and boundaries clearly
-
-**2. KEY RESEARCH OBJECTIVES**
-- What exact questions should the research answer? (list 3-7 specific questions)
-- What type of information is needed? (quantitative data, qualitative analysis, comparisons, recommendations)
-
-**3. RESEARCH METHODS**
-- How to collect and analyze information?
-- Which specific strategy to use? (choose and describe the most efficient approach for THIS topic)
-- Break the strategy into clear sequential steps the AI can follow in a single operation
-
-**4. EVALUATION CRITERIA**
-- Metrics, benchmarks, or qualitative considerations for comparison
-- Success or feasibility criteria
-- How to weigh conflicting information
-
-**5. EXPECTED OUTPUT**
-- What results should appear in the final report?
-- What structure should the report follow?
-- Next steps after the research (recommendations for what to do with the output)
-
-**6. CUSTOM INSTRUCTIONS**
-- Tailored quality instructions specific to the topic (3-5 instructions)
-- Examples: academic depth, recency requirements, citation standards, format preferences
+**Close with a dead-link audit:** instruct the agent to list cited URLs and flag any that do not resolve — if several fail, rerun with tighter source filters.
 
 **Quality guidelines:**
-- The plan should be systematic and actionable — no fluff, no filler
-- Include only actions and sources a language model can execute in a single Deep Research run
-- The final prompt should be self-contained — no external context needed
-- Target 95% success rate: the plan should be clear enough that any Deep Research tool produces thorough, accurate results
-- Keep the plan focused — typically 300-600 words. Long enough to be precise, short enough to not dilute focus
+- Systematic and actionable — no fluff. Self-contained — no external context needed.
+- Only actions and sources a model can execute in a single Deep Research run.
+- Default to the verifiable-topic framing for science/tech/math and the interpretable-topic framing (multi-stakeholder, empirical-vs-normative) for law/policy/social.
 
 ### Prompt B — Analysis Prompt
 
@@ -189,6 +170,7 @@ When generating the prompts, format them as clearly labeled, copy-pasteable bloc
 
 ## Cross-References
 
+- **Research Architect** — generates the deep-research *specification* that powers Prompt A (universal core + per-tool deltas). Use `research-architect` to design the brief, then Boomerang to carry it.
 - **Recon (R)** — use Recon instead when you need observation of a specific, known source, not broad research
 - **Orchestrate (O)** — Boomerang works well as a step within an Orchestrate workflow when workers need external data before proceeding
 - **KB Builder** — chains multiple Boomerangs into a structured knowledge base build

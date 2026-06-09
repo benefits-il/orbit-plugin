@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <a href="https://benakiva.github.io/orbit-plugin">דף נחיתה</a> ·
+  <a href="https://benefits-il.github.io/orbit-plugin">דף נחיתה</a> ·
   <a href="#התקנה">התקנה</a> ·
   <a href="#5-התבניות">תבניות</a> ·
   <a href="#איך-זה-עובד">איך זה עובד</a> ·
@@ -48,17 +48,25 @@
 
 ---
 
+## תוסף מצורף — Research Architect
+
+מעבר ל-5 התבניות ו-2 הפייפליינים, הפלאגין מגיע עם **research-architect** — מנוע מפרטי המחקר של ORBIT. הוא הופך כל נושא למפרט deep-research ברמה עולמית ומותאם לכלי (בריף מדויק, לא שאלה מעורפלת) שמדביקים ישירות ב-ChatGPT, ב-Gemini, ב-Perplexity, ב-Claude או ב-Grok. הוא בונה ליבה אוניברסלית של 9 שדות, מוסיף בלוקי התאמה לכל כלי המוכנים להדבקה, ומריץ בדיקת מצבי-כשל לפני שהוא פולט את הבריף.
+
+זהו **תוסף ל-ORBIT, לא תבנית שישית** — 5 התבניות האטומיות ו-2 הפייפליינים המורכבים שלמעלה הם המתודולוגיה. research-architect הוא המנוע ש-**Boomerang** ו-**KB Builder** קוראים לו כדי לכתוב את בריף המחקר שלהם, ואפשר גם להפעיל אותו ישירות עם `/orbit:research-architect`.
+
+---
+
 ## התקנה
 
 ### אופציה 1 — CLI (מומלץ)
 
 ```
-/install-plugin github:benakiva/orbit-plugin
+/install-plugin github:benefits-il/orbit-plugin
 ```
 
 ### אופציה 2 — הורדה ידנית
 
-1. **[הורדת orbit-plugin.zip](https://github.com/dartaryan/orbit-plugin/releases/latest/download/orbit-plugin.zip)**
+1. **[הורדת orbit-plugin.zip](https://github.com/benefits-il/orbit-plugin/releases/latest/download/orbit-plugin.zip)**
 2. לחלץ ולהעתיק את התוכן לתיקייה `.claude/plugins/orbit/` בפרויקט
 3. להפעיל מחדש את Claude Code
 
@@ -81,6 +89,7 @@
 | `/orbit:transfer` | יצירת לכידת מצב מלאה להמשכיות סשן |
 | `/orbit:kb-builder` | הרצת פייפליין מחקר-למאגר-ידע ב-4 שלבים |
 | `/orbit:design-pipeline` | הרצת פייפליין מחקר עיצובי ב-10 שלבים |
+| `/orbit:research-architect` | בניית מפרט deep-research מותאם לכלי (תוסף מצורף) |
 | `/orbit:help` | הצגת כל הפקודות ומדריך שימוש מהיר |
 
 ---
@@ -90,7 +99,7 @@
 דוגמה מעשית: נניח שצריך לחקור אסטרטגיות תמחור של מתחרים לפני ישיבת דירקטוריון.
 
 **שלב 1: תיאור המשימה ל-ORBIT**
-פותחים את Claude Code ומריצים `/orbit:boomerang`. מתארים את המשימה: "צריך ניתוח תחרותי של מודלי תמחור לכלי פיתוח בעולם ה-AI — ספציפית Cursor, Windsurf ו-Copilot." ORBIT שואל כמה שאלות הבהרה, ואז מייצר שני פרומפטים.
+פותחים את Claude Code ומריצים `/orbit:boomerang`. מתארים את המשימה: "צריך ניתוח תחרותי של מודלי תמחור לכלי פיתוח בעולם ה-AI — ספציפית Cursor, Windsurf ו-Copilot." ORBIT שואל כמה שאלות הבהרה, ואז מייצר שני פרומפטים. מאחורי הקלעים, ORBIT בונה את פרומפט A עם מנוע ה-research-architect המצורף — כך שהבריף הוא מפרט מחקר מותאם לכלי, לא שאילתה מעורפלת.
 
 **שלב 2: העברת פרומפט A לכלי המחקר**
 פרומפט A מכיל שאילתות חיפוש ספציפיות, מותאמות לכלים הרלוונטיים. מדביקים אותו ב-Perplexity, או ב-GPT עם חיפוש אינטרנט, או בכל כלי אחר. הפרומפט אומר לכלי בדיוק מה לחפש, באיזה פורמט להחזיר תוצאות, וממה להתעלם. אוספים את הממצאים הגולמיים.
@@ -123,7 +132,7 @@
 ## פיתוח מקומי
 
 ```bash
-git clone https://github.com/dartaryan/orbit-plugin.git
+git clone https://github.com/benefits-il/orbit-plugin.git
 cd orbit-plugin
 # לעקוב אחרי הוראות ההתקנה ב-CONTRIBUTING.md
 ```
@@ -132,7 +141,7 @@ cd orbit-plugin
 
 ## תיעוד מלא
 
-לתיעוד מלא דו-לשוני, שאלות נפוצות אינטראקטיביות ומדריכים ויזואליים — ראו את [דף הנחיתה](https://benakiva.github.io/orbit-plugin).
+לתיעוד מלא דו-לשוני, שאלות נפוצות אינטראקטיביות ומדריכים ויזואליים — ראו את [דף הנחיתה](https://benefits-il.github.io/orbit-plugin).
 
 ---
 
@@ -143,7 +152,7 @@ MIT — ראו [LICENSE](LICENSE) לפרטים מלאים.
 ---
 
 <p align="center">
-  <sub>נבנה על ידי <a href="https://github.com/dartaryan">בן עקיבא</a></sub>
+  <sub>נבנה על ידי <a href="https://github.com/benefits-il">בן עקיבא</a></sub>
 </p>
 
 </div>

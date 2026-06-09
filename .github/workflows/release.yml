@@ -32,7 +32,7 @@ jobs:
 
             **Option 1 — CLI (recommended)**
             ```
-            /install-plugin github:benakiva/orbit-plugin
+            /install-plugin github:benefits-il/orbit-plugin
             ```
 
             **Option 2 — Manual download**

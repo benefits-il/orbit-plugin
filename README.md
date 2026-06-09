@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://dartaryan.github.io/orbit-plugin">Landing Page</a> ·
+  <a href="https://benefits-il.github.io/orbit-plugin">Landing Page</a> ·
   <a href="#installation">Installation</a> ·
   <a href="#the-5-patterns">Patterns</a> ·
   <a href="#how-it-works">How It Works</a> ·
@@ -46,17 +46,25 @@ Plus **2 compound workflows**:
 
 ---
 
+## Bundled Extension — Research Architect
+
+Beyond the 5 patterns and 2 workflows, the plugin bundles **research-architect** — the ORBIT research-spec engine. It turns any topic into a world-class, tool-tuned **deep-research specification** (a precise brief, not a vague question) that you paste straight into ChatGPT, Gemini, Perplexity, Claude, or Grok. It builds a 9-field universal core, appends ready-to-paste per-tool deltas, and runs a failure-mode self-check before emitting the brief.
+
+This is an **extension to ORBIT, not a sixth pattern** — the 5 atomic patterns and 2 compound workflows above remain the methodology. research-architect is the engine that **Boomerang (B)** and **KB Builder** call to write their research brief, and you can also invoke it directly with `/orbit:research-architect`.
+
+---
+
 ## Installation
 
 ### Option 1 — CLI (recommended)
 
 ```
-/install-plugin github:benakiva/orbit-plugin
+/install-plugin github:benefits-il/orbit-plugin
 ```
 
 ### Option 2 — Manual Download
 
-1. **[Download orbit-plugin.zip](https://github.com/dartaryan/orbit-plugin/releases/latest/download/orbit-plugin.zip)**
+1. **[Download orbit-plugin.zip](https://github.com/benefits-il/orbit-plugin/releases/latest/download/orbit-plugin.zip)**
 2. Extract and copy the contents into your project's `.claude/plugins/orbit/` directory
 3. Restart Claude Code
 
@@ -79,6 +87,7 @@ Try your first pattern: `/orbit:boomerang` with a simple research task.
 | `/orbit:transfer` | Generate a full state capture for session continuity |
 | `/orbit:kb-builder` | Run the 4-stage research-to-knowledge-base pipeline |
 | `/orbit:design-pipeline` | Run the 10-stage design research pipeline |
+| `/orbit:research-architect` | Build a tool-tuned deep-research specification (bundled extension) |
 | `/orbit:help` | Show all commands and quick usage guide |
 
 ---
@@ -88,7 +97,7 @@ Try your first pattern: `/orbit:boomerang` with a simple research task.
 Let's walk through a real example. Say you need to research your competitors' pricing strategies before a board meeting.
 
 **Step 1: Describe the mission to ORBIT**
-Open Claude Code and run `/orbit:boomerang`. Describe the mission: "I need a competitive analysis of pricing models for developer tools in the AI space — specifically Cursor, Windsurf, and Copilot." ORBIT asks a few clarifying questions, then generates two prompts.
+Open Claude Code and run `/orbit:boomerang`. Describe the mission: "I need a competitive analysis of pricing models for developer tools in the AI space — specifically Cursor, Windsurf, and Copilot." ORBIT asks a few clarifying questions, then generates two prompts. Under the hood, ORBIT builds Prompt A with its bundled **research-architect** engine — so the brief is a tool-tuned research specification, not a vague query.
 
 **Step 2: Carry Prompt A to your research tools**
 Prompt A contains specific search queries, optimized for the tools you'll use. Paste it into Perplexity, or GPT with web search, or whatever you prefer. The prompt tells the tool exactly what to look for, what format to return results in, and what to ignore. Collect the raw findings.
@@ -121,7 +130,7 @@ That's the loop. Describe the mission, ORBIT generates the prompts, carry them b
 ## Local Development
 
 ```bash
-git clone https://github.com/dartaryan/orbit-plugin.git
+git clone https://github.com/benefits-il/orbit-plugin.git
 cd orbit-plugin
 # Follow local setup instructions in CONTRIBUTING.md
 ```
@@ -130,7 +139,7 @@ cd orbit-plugin
 
 ## Full Documentation
 
-See the [landing page](https://benakiva.github.io/orbit-plugin) for full bilingual documentation, interactive FAQ, and visual guides.
+See the [landing page](https://benefits-il.github.io/orbit-plugin) for full bilingual documentation, interactive FAQ, and visual guides.
 
 ---
 
@@ -141,5 +150,5 @@ MIT — see [LICENSE](LICENSE) for full terms.
 ---
 
 <p align="center">
-  <sub>Built by <a href="https://github.com/dartaryan">Ben Akiva</a></sub>
+  <sub>Built by <a href="https://github.com/benefits-il">Ben Akiva</a></sub>
 </p>
