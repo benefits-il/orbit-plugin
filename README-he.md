@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <a href="https://benefits-il.github.io/orbit-plugin">דף נחיתה</a> ·
+  <a href="https://benefits-il.dev/orbit-plugin">דף נחיתה</a> ·
   <a href="#התקנה">התקנה</a> ·
   <a href="#5-התבניות">תבניות</a> ·
   <a href="#איך-זה-עובד">איך זה עובד</a> ·
@@ -141,7 +141,7 @@ cd orbit-plugin
 
 ## תיעוד מלא
 
-לתיעוד מלא דו-לשוני, שאלות נפוצות אינטראקטיביות ומדריכים ויזואליים — ראו את [דף הנחיתה](https://benefits-il.github.io/orbit-plugin).
+לתיעוד מלא דו-לשוני, שאלות נפוצות אינטראקטיביות ומדריכים ויזואליים — ראו את [דף הנחיתה](https://benefits-il.dev/orbit-plugin).
 
 ---
 

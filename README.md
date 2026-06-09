@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://benefits-il.github.io/orbit-plugin">Landing Page</a> ·
+  <a href="https://benefits-il.dev/orbit-plugin">Landing Page</a> ·
   <a href="#installation">Installation</a> ·
   <a href="#the-5-patterns">Patterns</a> ·
   <a href="#how-it-works">How It Works</a> ·
@@ -139,7 +139,7 @@ cd orbit-plugin
 
 ## Full Documentation
 
-See the [landing page](https://benefits-il.github.io/orbit-plugin) for full bilingual documentation, interactive FAQ, and visual guides.
+See the [landing page](https://benefits-il.dev/orbit-plugin) for full bilingual documentation, interactive FAQ, and visual guides.
 
 ---
 
