@@ -22,3 +22,8 @@ dist/
 # Misc
 *.log
 *.tmp
+
+# Never commit a zip into the plugin source — the plugin source is "./" (whole repo),
+# so a committed *.zip becomes a nested zip and breaks `marketplace add` with
+# "nested zip file are not allowed". Distribute zips as GitHub release assets instead.
+*.zip
